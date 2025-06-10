@@ -1,0 +1,40 @@
+### Get all users
+GET http://localhost:5204/users
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImp0aSI6IjczOTM1OGNlLTFlZjUtNGRmNC05N2FiLTAwMmYwNzdlNWQ2MiIsImV4cCI6MTc0OTU5NDc0MywiaXNzIjoieW91ci1hcHAiLCJhdWQiOiJ5b3VyLXVzZXJzIn0.mawlb-65mFDXi_eRbFT4ytwv0VbVjAEY_CP-BpGLM38
+
+### Get a specific user by ID
+GET http://localhost:5204/users/1
+Accept: application/json
+
+### Create a new user
+POST http://localhost:5204/users
+Content-Type: application/json
+
+{
+  "name": "Alice Johnson",
+  "email": "alice.johnson@example.com"
+}
+
+### Update an existing user
+PUT http://localhost:5204/users/1
+Content-Type: application/json
+
+{
+  "name": "John Updated",
+  "email": "john.updated@example.com"
+}
+
+### Delete a user
+DELETE http://localhost:5204/users/2
+
+### Token retrieve
+POST http://localhost:5204/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "password"
+}
+
+
